@@ -1,0 +1,719 @@
+@font-face {
+			font-family: lato;
+			src: url("../fonts/Lato-Regular.ttf");
+			font-weight: normal;
+}
+
+@font-face {
+	font-family: lato;
+	src: url("../fonts/Lato-Bold.ttf");
+	font-weight: bold;
+}
+
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: #f5f5f5;
+	font-family: lato;
+	
+}
+
+/*modal styles*/
+
+#infobanner {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	z-index: 110;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+}
+
+
+
+.infogreen {
+	background-color: rgb(123,187,94);
+	top: -50px;
+	transition: 1s;
+}
+
+.showbanner {
+
+	/*animation-name: bannershow;
+	animation-duration: 0.6s;
+	-webkit-animation-name: bannershow;
+	-webkit-animation-duration: 0.6s;*/
+
+}
+
+@-webkit-keyframes bannershow {
+	from {top: -50px;}
+	to {top: 0;}
+}
+
+
+
+
+.modalholder {
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	z-index: 100;
+	/*-webkit-transition: 1s;*/
+}
+
+.modalcontainer {
+	display: inline-block;
+	width: 520px;
+	/*height: 600px;*/
+	height: auto;
+	position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-moz-transform: translateY(-50%);
+  	-o-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+
+.modalbox {
+	width: 520px;
+	min-height: 500px;
+	display: inline-block;
+  	padding-top: 55px;
+  	border-radius: 5px;
+  	margin-bottom: 10px;
+	background: white;
+	animation-name: modalshow;
+	animation-duration: 0.6s;
+	-webkit-animation-name: modalshow;
+	-webkit-animation-duration: 0.6s;
+}
+
+.bot60 {
+	margin-bottom: 60px;
+}
+
+@-webkit-keyframes modalshow {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+/*@-webkit-keyframes modalshow {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}*/
+
+/*@keyframes modalshow {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}*/
+
+.modalbox img {
+	margin-bottom: 4px;
+}
+
+
+.modalinput {
+	width: 350px;
+	display: inline-block;
+}
+
+.top60 {
+	padding-top: 41px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container {
+	background: white;
+	box-shadow: 0 0 2px #ececec;
+	margin-bottom: 20px;
+}
+
+header {
+	height: 55px;
+	line-height: 55px;
+}
+
+.ups {
+	height: 76px;			
+}
+
+.upperheader div {
+	height: 76px;
+	line-height: 76px;
+}
+
+.upperheader h4, .upperheader h6 {
+	color: #34495c;
+	line-height: 76px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.customh4 {
+	padding-bottom: 8px; 
+	/*font-weight: normal; */
+	color: rgb(149, 155, 166); 
+	border-bottom: 1px solid #eee;
+}
+
+/*User profile part*/
+
+.userpic {
+	width: 150px;
+
+}
+
+
+
+.userwpholder {
+	width: 540px;
+}
+
+.userwpimage {
+	width: 540px;
+	height: 150px;
+	background: url("../gfx/profilewpback.png") no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	border-radius: 5px;
+
+}
+
+/*.upimage {
+	width: 100%;
+	height: 100%;
+	min-width: 150px;
+	max-width: 150px;
+
+}*/
+
+.upimage {
+	width: 150px;
+	height: 150px;
+	min-width: 150px;
+	max-width: 150px;
+	background: url("../gfx/profileback.png") no-repeat;
+	background-size: contain;	
+	margin: auto;
+	border-radius: 50%;
+	overflow: hidden;
+	background-position: center;
+	background-size: cover;
+}
+
+/*Std buttons*/
+
+.custombtn {
+	background: rgb(47, 202, 196);
+	color: white;
+	vertical-align: middle;
+}
+
+.custombtn:hover {
+	background: rgb(60, 219, 213);
+	color: white;
+}
+
+.userbtn {
+	background: rgb(236, 240, 241);
+	color: rgb(149, 165, 166);
+	vertical-align: middle;
+
+}
+
+.userbtn:hover {
+	background: rgb(60, 219, 213);
+	color: white;
+}
+
+/*Input fields style*/
+
+input.form-control {
+	color:rgb(127,140,141) !important;
+}
+
+.form-control::-webkit-input-placeholder {
+   color: rgb(127,140,141);
+
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: rgb(127,140,141);  
+}
+
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: rgb(127,140,141);  
+}
+
+.form-control:-ms-input-placeholder {  
+   color: rgb(127,140,141);  
+}
+
+/*Label styling*/
+
+.customlabel {
+	color: rgb(52, 73, 94);
+	font-size: 13px;
+	font-weight: normal;
+}
+
+/*Under input text*/
+
+.underinput {
+	color: rgb(174, 184, 188);
+	padding-top: 5px;
+	display: inline-block;
+}
+
+#namepreview {
+	color: black;
+}
+
+.smallunder {
+	font-size: 11px;
+}
+
+#aboutme {
+	width: 100%;
+	height: 300px;
+	resize: none;
+}
+
+/*Skills labels styling*/
+
+.skholder {
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#skills {
+  height: 33px;
+  /*min-width: 200px;*/
+  float: left;
+  font-size: 14px;
+  line-height: 33px;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0 10px !important;
+}
+
+#skillsoutput {
+  height: 33px;
+  min-width: 2px; 
+  line-height: 33px; 
+  display: inline-block; 
+  float: left;
+}
+
+#skillsoutput span {
+  background: rgb(47,202,196) url("../gfx/ch.png") 88% center no-repeat;
+  margin: 0 0 0 5px;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  padding: 5px 20px 5px 10px;
+  cursor: pointer;
+}
+
+#skillsoutput span:hover {
+  background: rgb(34,178,172) url("../gfx/ch.png") 88% center no-repeat;
+}
+
+/*File input styling*/
+
+input[type=file] {
+	background: rgb(236, 240, 241);
+	color: rgb(149, 165, 166);
+	vertical-align: middle;
+	padding: 10px 20px;
+}
+
+input[type=file]:hover {
+	background: rgb(60, 219, 213);
+	color: white;
+}
+
+/*Std. checkbox*/
+
+input[type=checkbox] {
+	/*width: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 0;*/
+	display: none;
+}
+
+input[type=checkbox] + label {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url("../gfx/checkboxicon.png") no-repeat bottom;
+	
+}
+
+input[type=checkbox] + label:hover {
+	background: url("../gfx/checkboxicon.png") no-repeat top;
+	cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+	background: url("../gfx/checkboxicon.png") no-repeat 0 -40px;
+	}
+
+input[type=checkbox]:checked + label:hover {
+	background: url("../gfx/checkboxicon.png") no-repeat 0 -20px;
+}
+
+.checkholder {
+	height: 35px;
+	line-height: 30px;
+	color: rgb(127,140,141);
+}
+
+.checkholder label {
+	margin-right: 10px;
+	vertical-align: bottom;
+	position: relative;
+}
+
+.checkholder label span {
+	display: inline-block;
+	width: 150px;
+	position: absolute;
+	left: 33px;
+	top: -5px;
+	font-weight: normal;
+}
+
+.bdrleft {
+	border-left: 1px solid #ececec;
+}		
+
+.bdrright {
+	border-right: 1px solid #ececec;
+}
+
+.bdrbottom {
+	border-bottom: 1px solid #ececec;
+}
+
+.bdrtop {
+	border-top: 1px solid #ececec;
+}
+
+.nopadding {
+	padding: 0;
+}
+
+header nav, header div {
+	height: 55px;
+	line-height: inherit;
+}
+
+
+header .list-inline {
+	margin-left: 12px;
+	margin-bottom: 0;
+	font-size: 11px;
+	color: #34495c;
+}
+
+header .list-inline li {
+	padding: 0 20px;
+}
+
+header .list-inline li:first-child {
+	padding: 0 10px 0 0;
+}
+
+header .list-inline li a:hover {
+	text-decoration: none;
+	color: #95a5a6;
+
+}
+
+
+
+.sidemenu ul {
+	margin-bottom: 0;
+	padding-top: 15px;
+}
+
+.sidemenu li h6 {
+	color: #95a5a6;
+	text-transform: uppercase;
+}
+
+.sidemenu li {
+	font-size: 12px;
+	line-height: 28px;
+	padding-left: 28px;
+	color: #34495c;
+}
+
+.sidemenu li:hover {
+	background: #f9f9f9;
+	border-left: 2px solid #95a5a6;
+	padding-left: 26px;
+	color: #95a5a6;
+}
+
+.sidemenu a {
+	display: block;
+	line-height: inherit;
+}
+
+
+li a {
+	color: inherit;
+}
+
+li.noback:hover {
+	background: transparent;
+	border: none;
+	padding-left: 28px;
+}
+
+.useritem {
+	padding-bottom: 40px;
+
+}
+
+.gear {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	overflow: hidden;
+	background: url("../gfx/gear.png");
+}
+
+.gear:hover {
+	cursor: pointer;
+	background-position: bottom;
+}
+
+.itemlevelone {
+	margin-bottom: 0;
+}
+
+.itemlevelone > div {
+	height: 35px;
+	line-height: 35px;
+}
+
+.itemlevelone > div img {
+	vertical-align: center;
+	margin-top: -5px;
+}
+
+.itemlevelone > div p {
+	font-size: 13px;
+	
+}
+
+.greytextarea {
+	background: #e6e8ea; 
+	border-radius: 5px; 
+	padding: 15px;
+}
+
+
+/*Footer styles*/
+
+.genfooter {
+	height: 80px;
+	line-height: 80px;
+}
+
+.genfooter div {
+	line-height: inherit;
+}
+
+.genfooter a {
+	color: rgb(52,73,94);
+	margin-right: 38px;
+}
+
+.genfooter a:hover {
+	/*color: rgb(52,73,94);*/
+	color: #95a5a6;
+}
+
+.genfooter .text-right a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	margin: 0 0 0 10px;
+	background-position: bottom;
+}
+
+.genfooter .text-right a:hover {
+	background-position: top;
+}
+
+.fb {
+	background: url("../gfx/sfb.png");
+}
+
+.insta {
+	background: url("../gfx/sinsta.png");
+}
+
+.tw {
+	background: url("../gfx/stw.png");
+} 
+
+.yt {
+	background: url("../gfx/syt.png");
+
+}
+
+.delicon, .addicon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+
+.addicon {
+	background: url("../gfx/addicon.png") top;
+}
+
+.delicon {
+	background: url("../gfx/deleteicon.png") top;
+}
+
+.delicon:hover, .addicon:hover {
+	background-position: bottom;
+}
+
+
+
+.lttxt {
+	color: #95a5a6;
+}
+
+.dktxt {
+	color: #34495c;
+}
+
+.midsizetxt {
+	font-size: 13px;
+
+}
+
+.smallsizetxt {
+	font-size: 11px;
+
+}
+
+.green {
+	background: green;
+}
+
+.orange {
+	background: orange;
+}
+
+.grey {
+	background: lightgrey;
+}
+
+.sline {
+	background: url("../gfx/sline.png") center repeat-y;
+}
+
+.minhght {
+	height: 50px;
+}
+
+.top30 {
+	padding-top: 30px;
+}
+
+.top50 {
+	padding-top: 50px;
+}
+
+.botm30 {
+	margin-bottom: 30px;
+
+}
+
+.left70 {
+	padding-left: 70px;
+}
+
+.wdth80 {
+	width: 80% !important;
+}
+
+.wdth95 {
+	width: 90% !important;
+}
+
+.shim10 {
+	width: 10px;
+
+}
+
+.shim5 {
+	width: 5px;
+
+}
+
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+	.userpic, .upimage, .userwpimage, .userwpholder {
+		width: 100%;
+	}
+
+	.genfooter a {
+	margin-right: 25px;
+	}
+
+}
+
+@media only screen and (max-width: 985px) {
+	.wdth95 {
+		width: 100% !important;
+	}
+
+	.wdth80 {
+		width: 100% !important;
+	}
+
+	.genfooter a {
+	margin-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	.modalbox, .modalcontainer {
+		width: 100%;
+	}
+}
+
+
