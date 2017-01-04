@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Welcome page</title>
+	<meta name="description" content="Axapper">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" href="css/bootstrap-select.css">
+
+	<style type="text/css">
+		
+	/* Links in drop down list - start */
+
+		li.selected a {
+			outline: none;
+		}
+
+		.dropdown-menu>li>a {
+			color: rgb(47, 202, 196);
+		}
+
+		.dropdown-menu>li>a:focus, 
+		.dropdown-menu>li>a:hover {
+			background: transparent;
+			color: rgb(128, 128, 128);
+		}
+
+		.dropdown-menu>li>a:active {
+			outline: none;
+		}
+
+		/* Links in drop down list - end */
+
+
+		/* Static state of the unopened drop down button */ 
+
+		.btn-default {
+			background: transparent;
+			box-shadow: none;
+		}
+
+		.btn-default:hover {
+			background: rgba(47, 202, 196, 1);
+			color: white;
+			text-shadow: none;
+		}
+
+		.btn:focus {
+			background: transparent;
+		}
+
+		.btn:focus:hover {
+			color: black;
+		}
+
+		/* Button state on click */
+
+		button:active {
+			color: white !important;
+			box-shadow: none !important;
+			background: rgba(47, 202, 196, 1) !important;
+		}
+
+		/*button.active.dropdown-toggle {
+			color: white !important;
+			box-shadow: none !important;
+			background: rgba(47, 202, 196, 1) !important;
+		}*/
+
+		
+
+		/* Static state of clicked and opened drop down button */
+
+		.open>.dropdown-toggle.btn-default {
+			color: white !important;
+			box-shadow: none !important;
+			background: rgba(47, 202, 196, 1) !important;
+			text-shadow: none;
+
+		}
+
+		.caret {
+			color: lightgrey;
+			/*border: none;*/
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+
+<div class="container box">
+
+	<header class="row bdrbottom">
+		<nav class="col-xs-10 nopadding">
+			<ul class="list-inline">
+				<li>
+					<img src="gfx/logo.png" style="margin-top: -3px;">
+				</li>
+				<li class="hidden-xs"><a href="#">Companies</a></li>
+				<li class="hidden-xs"><a href="#">Vacancies</a></li>
+				<li class="hidden-xs"><a href="#">Services</a></li>
+				<li class="hidden-xs"><a href="#">Professionals</a></li>
+			</ul>
+		</nav>
+		<div class="col-xs-2 text-right">
+			<img src="gfx/greydot.png">
+		</div>
+	</header>
+
+	<div class="row upperheader bdrbottom">
+		
+		<div class="col-xs-3 nopadding" >
+			<div class="col-sm-3 hidden-xs text-left">
+				<img src="gfx/greydot.png">
+			</div>
+			<div class="col-sm-9 col-xs-12">
+				<h6>Peter Thompson</h6>
+			</div>
+		</div>
+		<div class="col-xs-9 bdrleft">
+			<div class="row">
+			<div class="col-xs-6">
+				<div class="pull-left hidden-md shim10"></div>
+				<div class="pull-left hidden-lg hidden-xs shim5"></div>
+				<h4>Employment</h4>
+			</div>
+			<div class="col-xs-6 text-right">
+				<button class="btn btn-md custombtn">Add Employment</button>
+			</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-xs-3 hidden-xs nopadding sidemenu" >
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Favorites</h6></li>
+				<li><a href=#>Professionals</a></li>
+				<li><a href=#>Services</a></li>
+			</ul>
+
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Profile</h6></li>
+				<li><a href=#>General</a></li>
+				<li><a href=#>Certificates</a></li>
+				<li><a href=#>Education</a></li>
+				<li><a href=#>Employment</a></li>
+			</ul>
+
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Subscribtions</h6></li>
+				<li><a href=#>Vacancies</a></li>
+			</ul>
+
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Settings</h6></li>
+				<li><a href=#>Account</a></li>
+				<li><a href=#>Notifications</a></li>
+				<li><a href=#>Privacy</a></li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-xs-12 bdrleft top30">
+			
+			<div class="useritem"> <!-- User Item begin -->
+				<div class="row itemlevelone">
+					<div class="col-xs-2 col-sm-2 col-md-1 text-center">
+						<img src="gfx/dot.png">
+					</div>
+					<div class="col-xs-8 col-sm-8 col-md-10 nopadding">
+						<p class="lttxt">April 2015 - Present (1 Year and 5 months)</p>
+					</div>
+					<div class="col-xs-2 col-sm-2 col-md-1 pull-right text-right ">
+						<div class="gear"></div>
+					</div>
+				</div>
+				<div class="row" style="height: auto; overflow: auto;">
+					<div class="col-xs-2 col-md-1 minhght sline">
+						
+					</div>
+					<div class="col-xs-10 col-md-11 text-left" style="padding: 20px 0 20px;">
+						<img src="gfx/ico1.png" class="pull-left" style="margin-right: 20px;">
+					
+						<h6 class="lttxt smallsizetxt" style="margin-bottom: 3px;">Creative Dash</h6>
+						<p class="dktxt midsizetxt">Dynamics AX Systems Administrator</p>
+
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div> <!-- User item end -->
+
+			<div class="useritem"> <!-- User item begin -->
+				<div class="row itemlevelone">
+						<div class="col-xs-2 col-sm-2 col-md-1 text-center">
+							<img src="gfx/dot.png">
+						</div>
+						<div class="col-xs-8 col-sm-8 col-md-10 nopadding">
+							<p class="lttxt">April 2015 - Present (1 Year and 5 months)</p>
+						</div>
+						<div class="col-xs-2 col-sm-2 col-md-1 pull-right text-right ">
+							<div class="gear"></div>
+						</div>
+				</div>
+				<div class="row">
+						<div class="col-xs-2 col-md-1">
+							
+						</div>
+						<div class="col-xs-10 col-md-11 text-left nopadding" style="padding: 20px 0 10px;">
+							<img src="gfx/ico2.png" class="pull-left" style="margin-right: 20px;">
+						
+							<h6 class="lttxt smallsizetxt" style="margin-bottom: 3px;">Creative Dash</h6>
+							<p class="dktxt midsizetxt">Dynamics AX Systems Administrator</p>
+
+						</div>
+						<div class="clearfix"></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-10 col-sm-10 col-sm-offset-2 col-xs-offset-2 col-md-offset-1 left70">
+						
+						<div class="smallsizetxt greytextarea">
+						<p>Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit.</p> 
+						<p>Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit.</p>
+						<p>Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. Lorem ipsum dolor sit amet conseceteur dolor sit. </p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- User item end -->
+			
+		</div>
+
+
+	</div>
+
+
+<footer class="row bdrtop">
+		
+		<div class="col-md-3 hidden-sm nopadding"></div>
+		<div class="col-md-9 col-sm-12 bdrleft genfooter nopadding">
+			
+			<div class="col-sm-6 hidden-xs">
+				<a href="#">About Axapper</a><a href="#">Get Feedback</a><a href="#">Need Help?</a>
+			</div>
+			<div class="col-sm-6 col-xs-12 text-right">
+				<a href="#" class="fb"></a><a href="#" class="insta"></a><a href="#" class="tw"></a><a href="#" class="yt"></a>
+			</div>
+			
+		</div>
+
+</footer>
+
+
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+	
+</body>
+
+</html>

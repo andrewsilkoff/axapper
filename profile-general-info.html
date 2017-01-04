@@ -1,0 +1,638 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Welcome page</title>
+	<meta name="description" content="Axapper">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">	
+	<link rel="stylesheet" href="css/bootstrap-select.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<style type="text/css">
+		
+	/* Links in drop down list - start */
+
+		li.selected a {
+			outline: none;
+		}
+
+		.dropdown-menu>li>a {
+			color: rgb(47, 202, 196);
+		}
+
+		.dropdown-menu>li>a:focus, 
+		.dropdown-menu>li>a:hover {
+			background: transparent;
+			color: rgb(128, 128, 128);
+		}
+
+		.dropdown-menu>li>a:active {
+			outline: none;
+		}
+
+		/* Links in drop down list - end */
+
+
+		/* Static state of the unopened drop down button */ 
+
+		.btn-default {
+			background: transparent;
+			box-shadow: none;
+			color: rgb(127,140,141) !important;
+		}
+
+		.btn-default:hover {
+			background: rgba(47, 202, 196, 1);
+			color: white !important;
+			text-shadow: none;
+		}
+
+		.btn:focus {
+			background: transparent;
+		}
+
+		.btn:focus:hover {
+			color: black !important;
+		}
+
+		/* Button state on click */
+
+		button:active {
+			color: white !important;
+			box-shadow: none !important;
+			background: rgba(47, 202, 196, 1) !important;
+		}
+
+		/*button.active.dropdown-toggle {
+			color: white !important;
+			box-shadow: none !important;
+			background: rgba(47, 202, 196, 1) !important;
+		}*/
+
+		
+
+		/* Static state of clicked and opened drop down button */
+
+		.open>.dropdown-toggle.btn-default {
+			color: white !important;
+			box-shadow: none !important;
+			background: rgba(47, 202, 196, 1) !important;
+			text-shadow: none;
+
+		}
+
+		.caret {
+			color: lightgrey;
+			/*border: none;*/
+		}
+	</style>
+
+</head>
+
+<body>
+
+<div id="infobanner" class="infogreen">
+	Instructions to reset your password has been sent to you. Please check your email.
+</div>
+
+<div id="modalcreateac" class="modalholder text-center">
+	<div class="modalcontainer">
+		<div class="modalbox">
+			<img src="gfx/axlogo.png">
+			<h4>Hi, Let's create your account!</h4>
+			<div class="modalinput top60 text-left">
+				<label class="control-label customlabel" for="loginemail">Email</label>
+				<input class="form-control" type="email" name="email" id="loginemail">
+			</div>
+			<div class="modalinput text-left bot60" style="padding-top: 36px;">
+				<label class="control-label customlabel" for="loginpwd">Password</label>
+				<input class="form-control" type="text" name="password" id="loginpwd">
+			</div>
+			<div class="bot60">
+				<button type="submit" class="btn btn-md custombtn">Create an account</button>
+			</div>
+			
+			
+		</div>
+		By creating account you agree to the <a href="#">terms & conditions.</a>
+	</div>
+
+</div>
+
+<div id="modallogin" class="modalholder text-center">
+	<div class="modalcontainer">
+		<div class="modalbox">
+			<img src="gfx/axlogo.png">
+			<h4>Login to your Axapper account</h4>
+			<div class="modalinput top60 text-left">
+				<label class="control-label customlabel" for="loginemail">Email</label>
+				<input class="form-control" type="email" name="email" id="loginemail">
+			</div>
+			<div class="modalinput text-left bot60" style="padding-top: 36px;">
+				<label class="control-label customlabel" for="loginpwd">Password</label>
+				<input class="form-control" type="text" name="password" id="loginpwd">
+			</div>
+			<div class="bot60">
+				<button type="submit" class="btn btn-md custombtn" style="width: 150px;">Login</button>
+			</div>
+			
+			
+		</div>
+		Not a member? <a href="#">Sign Up Now!S</a>
+	</div>
+
+</div>
+
+
+<div id="modalcompany" class="modalholder text-center">
+	<div class="modalcontainer">
+		<div class="modalbox">
+			<img src="gfx/axlogo.png">
+			<h4>Create your company account</h4>
+			<div class="modalinput top60 bot60 text-left">
+				<label class="control-label customlabel" for="companyname">Company Name</label>
+				<input class="form-control" type="email" name="email" id="companyname">
+			</div>
+			
+			<div class="bot60">
+				<button type="submit" class="btn btn-md custombtn">Create company</button>
+			</div>
+	
+		</div>
+		It's possile to post services and vacancies only from company account<br>
+		Also, you will have full access to professional database.
+	</div>
+
+</div>
+
+<div id="modalresetpwd" class="modalholder text-center">
+	<div class="modalcontainer">
+		<div class="modalbox">
+			<img src="gfx/axlogo.png">
+			<h4>Reset your password</h4>
+			<!-- <form> -->
+			<div class="modalinput top60 bot60 text-left">
+				<label class="control-label customlabel" for="resetpwd">Email</label>
+				<input class="form-control" type="email" name="email" id="resetpwd">
+			</div>
+			
+			<div class="bot60">
+				<button type="submit" id="getbanner" class="btn btn-md custombtn" data-banner="infobanner">Send reset instructions</button>
+			</div>
+			<!-- </form> -->
+	
+		</div>
+		Know Your password? <a href="#">Login</a>
+	</div>
+
+</div>
+
+<div class="container box">
+
+	<header class="row bdrbottom">
+		<nav class="col-xs-10 nopadding">
+			<ul class="list-inline">
+				<li>
+					<img src="gfx/logo.png" style="margin-top: -3px;">
+				</li>
+				<li class="hidden-xs"><a href="#" data-modal="modalcreateac">Companies</a></li>
+				<li class="hidden-xs"><a href="#" data-modal="modallogin">Vacancies</a></li>
+				<li class="hidden-xs"><a href="#" data-modal="modalcompany">Services</a></li>
+				<li class="hidden-xs"><a href="#" data-modal="modalresetpwd">Professionals</a></li>
+			</ul>
+		</nav>
+		<div class="col-xs-2 text-right">
+			<img src="gfx/greydot.png">
+		</div>
+	</header>
+
+	<div class="row upperheader bdrbottom">
+		
+		<div class="col-xs-3 nopadding" >
+			<div class="col-sm-3 hidden-xs text-left">
+				<img src="gfx/greydot.png">
+			</div>
+			<div class="col-sm-9 col-xs-12">
+				<h6>Peter Thompson</h6>
+			</div>
+		</div>
+		<div class="col-xs-9 bdrleft">
+			<div class="row">
+			<div class="col-xs-6">
+				<div class="pull-left hidden-md shim10"></div>
+				<div class="pull-left hidden-lg hidden-xs shim5"></div>
+				<h4>General</h4>
+			</div>
+			<!-- <div class="col-xs-6 text-right">
+				<button class="btn btn-md custombtn">Add Employment</button>
+			</div> -->
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-xs-3 hidden-xs nopadding sidemenu" >
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Favorites</h6></li>
+				<li><a href=#>Professionals</a></li>
+				<li><a href=#>Services</a></li>
+			</ul>
+
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Profile</h6></li>
+				<li><a href=#>General</a></li>
+				<li><a href=#>Certificates</a></li>
+				<li><a href=#>Education</a></li>
+				<li><a href=#>Employment</a></li>
+			</ul>
+
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Subscribtions</h6></li>
+				<li><a href=#>Vacancies</a></li>
+			</ul>
+
+			<ul class="list-unstyled">
+				<li class="noback"><h6>Settings</h6></li>
+				<li><a href=#>Account</a></li>
+				<li><a href=#>Notifications</a></li>
+				<li><a href=#>Privacy</a></li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-xs-12 bdrleft top30">
+			<div class="col-xs-12">
+				<div class="row"><!-- User pic area -->
+					<div class="col-sm-3 nopadding">
+						<div class="userpic">
+							<div class="upimage" id="userimage">
+							</div>
+								
+							<div class="top30 text-center">
+								<label for="userpic" class="btn btn-md userbtn" style="width: 100%; max-width: 150px; display: inline-block;">Upload Image</label>
+								<input type="file" id="userpic" style="display: none;" data-pic="userimage" >
+							</div>
+						</div>
+					</div>
+						
+					<div class="col-sm-9 nopadding">
+						<div class="userwpholder">
+							<div class="userwpimage" id="userwpimage"></div>
+
+							<div class="top30 text-right">
+								<label for="userpicwp" class="btn btn-md userbtn">Upload Image</label>
+								<input type="file" id="userpicwp" style="display: none;" data-pic="userwpimage" >
+							</div>
+						</div>
+					</div>
+				</div><!-- End of User pic area -->
+
+				<div class="row top50">
+					<form>
+
+					<div class="row">
+						<div class="col-md-8">
+							<label class="control-label customlabel" for="name">First name</label>
+							<input type="text" id="name" maxlength="80" class="form-control" placeholder="Enter your name">
+							<div class="underinput text-right pull-right">80</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="lastname">Last name</label>
+							<input type="text" id="lastname" class="form-control" placeholder="Enter your lastname">
+							<div class="underinput text-right pull-right">80</div>
+							<div  class="underinput smallunder pull-left">Your profile URL will be: http://www.axapper.com/<span id="namepreview"></span></div>
+						</div>
+					</div> 
+
+					<div class="row">
+						<div class=" col-md-8 top30"><label class="control-label customlabel" for="birthday">Date of birth</label></div>
+						<div class="col-md-8">
+							<div class="col-md-4 nopadding" >
+								<select id="birthday" class="selectpicker form-control wdth80">
+									<option selected="selected">Day</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+									<option>24</option>
+									<option>25</option>
+									<option>26</option>
+									<option>27</option>
+									<option>28</option>
+									<option>29</option>
+									<option>30</option>
+									<option>31</option>
+								</select>
+								<div class="hidden-md hidden-lg" style="margin-bottom: 20px;"></div>
+							</div>
+							<div class="col-md-4 nopadding text-center">
+								<select class="selectpicker form-control wdth80">
+									<option selected="selected">Month</option>
+									<option>Jan</option>
+									<option>Feb</option>
+									<option>March</option>
+									<option>Apr</option>
+									<option>May</option>
+									<option>June</option>
+									<option>July</option>
+									<option>Aug</option>
+									<option>Sept</option>
+									<option>Oct</option>
+									<option>Nov</option>
+									<option>Dec</option>
+								</select>
+								<div class="hidden-md hidden-lg" style="margin-bottom: 20px;"></div>
+							</div>
+							<div class="col-md-4 nopadding text-right">
+								<select class="selectpicker form-control wdth80">
+									<option selected="selected">Year</option>
+									<option>1975</option>
+									<option>1976</option>
+									<option>1977</option>
+									<option>1978</option>
+									<option>1979</option>
+									<option>1980</option>
+									<option>1981</option>
+									<option>1982</option>
+									<option>1983</option>
+									<option>1984</option>
+									<option>1985</option>
+									<option>1986</option>
+									<option>1987</option>
+									<option>1988</option>
+									<option>1989</option>
+									<option>1990</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="location">Location</label>
+							<input type="text" id="location" class="form-control" placeholder="Choose your location">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="location">About me</label>
+							<textarea id="aboutme" class="form-control"></textarea>
+						</div>
+					</div>
+
+					<h4 class="top50 customh4">Professional details</h4>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="protitle">Professional title</label>
+							<input type="text" id="protitle" class="form-control" placeholder="Lead technical consultant">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<div>
+								<label class="control-label customlabel" for="technology">Technology</label>
+							</div>
+							<select id="technology" class="selectpicker form-control wdth80">
+									<option selected="selected">Please choose</option>
+									<option>Microsoft Dynamics AX</option>
+									<option>Microsoft Dynamics AX</option>
+									<option>Microsoft Dynamics AX</option>
+									<option>Microsoft Dynamics AX</option>
+							</select>
+							<div class="underinput smallunder">Select the primary technology you work with</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<div>
+								<label class="control-label customlabel" for="experience">Working Experience</label>
+							</div>
+							<select id="experience" class="selectpicker form-control wdth80">
+									<option>Less than 1 year</option>
+									<option>More than 1 year</option>
+									<option>More than 3 years</option>
+									<option selected="selected">More than 5 years</option>
+									<option>More than 10 years</option>
+								</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<div>
+								<label class="control-label customlabel" for="areaofexp">Area of expertise</label>
+							</div>
+							<select id="areaofexp" class="selectpicker form-control wdth80" multiple="multiple">
+									<option>Area 1</option>
+									<option>Area 2</option>
+									<option>Area 3</option>
+									<option>Area 4</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="skills">Skills</label>
+							<div class="skholder wdth80" style="overflow: auto;">
+								<div id="skillsoutput"></div>
+								<input type="text" id="skills" >
+								<!-- <input id="mytxt" type="text" placeholder="Enter comma separated skills"> -->
+							</div>
+							
+							<div class="underinput smallunder">Enter up to 15 professional skills separated by comma</div>
+						</div>
+					</div>
+
+					<h4 class="top50 customh4">Work preferences</h4>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<div>
+								<label class="control-label customlabel" for="status">Status</label>
+							</div>
+							<select id="status" class="selectpicker form-control">
+									<option selected="selected">Don't seek employment</option>
+									<option>Seek employment</option>
+									<option>Open for part time projects</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class=" col-md-8 top30"><label class="control-label customlabel" for="salary">Salary expectations</label></div>
+						<div class="col-md-8">
+							<div class="col-md-4 nopadding">
+								<input type="text" id="salary" class="form-control wdth95" placeholder="12345">
+								<div class="hidden-md hidden-lg" style="margin-bottom: 20px;"></div>	
+							</div>
+							<div class="col-md-4 nopadding text-center">
+								<select class="selectpicker form-control wdth95">
+									<option selected="selected">USD</option>
+									<option>EUR</option>
+									<option>UK POUNDS</option>
+									<option>CHF</option>
+								</select>
+								<div class="hidden-md hidden-lg" style="margin-bottom: 20px;"></div>
+							</div>
+							<div class="col-md-4 nopadding text-right">
+								<select class="selectpicker form-control wdth95">
+									<option selected="selected">per year</option>
+									<option>per month</option>
+									<option>per week</option>
+									<option>per hour</option>
+								</select>
+								<div class="hidden-md hidden-lg" style="margin-bottom: 20px;"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 top30">
+							<div style="margin-bottom: 10px;">
+								<label class="control-label customlabel">Extras</label>
+							</div>
+							<div class="checkholder">
+								<input type="checkbox" name="openforrelocation" id="reloc">
+								<label for="reloc"><span>Open for relocation</span></label>
+								
+							</div>
+							<div class="checkholder">
+								<input type="checkbox" name="openforbtrips" id="btrips">
+								<label for="btrips"><span>Open to business trips</span></label>
+								
+							</div>
+							<div class="checkholder">
+								<input type="checkbox" name="openforremotejob" id="remotejob">
+								<label for="remotejob"><span>Open to work remotely</span></label>
+								
+							</div>
+						</div>
+					</div>
+
+					<h4 class="top50 customh4">Contacts</h4>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="website">Website</label>
+							<input type="text" class="form-control" placeholder="Web site address">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="email">Email</label>
+							<input type="text" class="form-control" placeholder="Please enter your email">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-8 top30">
+							<label class="control-label customlabel" for="phone">Phone</label>
+							<input type="text" class="form-control" placeholder="Please enter your phone number">
+						</div>
+					</div>
+
+					<h4 class="top50 customh4">Socials, links and other contacts</h4>
+
+					<div class="row">
+						<div class="col-md-8 top30 botm30">
+							<div class="col-md-3 nopadding">
+								<select class="selectpicker form-control wdth95">
+										<option selected="selected">Skype</option>
+										<option>LinkedIn</option>
+										<option>MSN</option>
+								</select>
+								<div class="hidden-md hidden-lg" style="margin-bottom: 20px;"></div>
+							</div>
+							<div class="col-md-9 nopadding">
+								<input type="text" class="form-control">
+							</div>
+
+
+						</div>
+
+						<div class="col-md-4 top30 nopadding">
+							<div class="delicon"></div>
+							<div class="addicon"></div>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="row">
+						<div class="col-md-8 top30 botm30">
+							<div class="col-md-3 nopadding">
+								<button class="btn btn-md custombtn wdth95">Save changes</button>
+							</div>
+						</div>
+					</div>	
+					
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<footer class="row bdrtop">
+		
+		<div class="col-md-3 hidden-sm nopadding"></div>
+		<div class="col-md-9 col-sm-12 bdrleft genfooter nopadding">
+			
+			<div class="col-sm-6 hidden-xs">
+				<a href="#">About Axapper</a><a href="#">Get Feedback</a><a href="#">Need Help?</a>
+			</div>
+			<div class="col-sm-6 col-xs-12 text-right">
+				<a href="#" class="fb"></a><a href="#" class="insta"></a><a href="#" class="tw"></a><a href="#" class="yt"></a>
+			</div>
+			
+		</div>
+
+	</footer>
+
+
+	
+
+
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/custom.js"></script>
+	
+</body>
+
+</html>
